@@ -1,0 +1,2 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');
+test('candidate version agrees across UI, launcher, package scripts and release notes',()=>{const v=JSON.parse(fs.readFileSync('package.json','utf8')).version;for(const name of ['prototype/index.html','prototype/app.js','desktop/OpenFHS.cs','desktop/build-windows.ps1','Start OpenFHS Offline.cmd','docs/release-notes.md'])assert.ok(fs.readFileSync(name,'utf8').includes(v),name);});

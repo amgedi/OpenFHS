@@ -1,0 +1,37 @@
+{
+  "directories": [
+    "prototype",
+    "desktop",
+    "tests",
+    "scripts",
+    ".github",
+    "public-assets",
+    "docs/assets"
+  ],
+  "files": [
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    ".gitignore",
+    "package.json",
+    "release-files.json",
+    "netlify.toml",
+    "server.cjs",
+    "support-service.cjs",
+    "build-public.cjs",
+    "preview-public.cjs",
+    "package-release.ps1",
+    "Start OpenFHS.cmd",
+    "Start OpenFHS Offline.cmd",
+    "docs/data-specification-v0.1.md",
+    "docs/privacy.md",
+    "docs/migration-policy.md",
+    "docs/prototype-scope.md",
+    "docs/tester-alpha.md",
+    "docs/feedback-template.txt",
+    "docs/release-notes.md",
+    "docs/release-readiness.md",
+    "NOTICE.md"
+  ]
+}

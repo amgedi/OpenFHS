@@ -1,0 +1,17 @@
+OpenFHS fictional-data usability feedback
+Version:
+Device / operating system / browser:
+Language / theme:
+Task and exact steps:
+Expected result:
+Actual result:
+Were answers lost? Could you recover?
+Was the cat/date/entry clear?
+What was the most confusing wording or step?
+Keyboard / screen reader / zoom issue:
+One improvement that would help most:
+
+Review before sending to openfhs@gmail.com.
+Use invented examples only. Do not attach private backups, medical information,
+household videos, passwords or tokens. This is usability feedback, not research
+participation or a veterinary consultation.

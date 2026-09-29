@@ -1,0 +1,40 @@
+# Keep local participant information and exports out of source control.
+# This is a convenience, not an access-control or privacy system.
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+private-data/
+local-data/
+exports/
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.sqlite-wal
+*.sqlite-shm
+openfhs-fictional-*.json
+openfhs-fictional-*.csv
+openfhs-complete-backup-*.json
+qa-artifacts/
+
+# Local tooling, logs and credential containers must never enter source packages.
+*.log
+*.pem
+*.key
+*.pfx
+*.p12
+.DS_Store
+Thumbs.db
+# Only reviewed public documents enter the initial repository.
+docs/*
+!docs/assets/
+!docs/data-specification-v0.1.md
+!docs/privacy.md
+!docs/migration-policy.md
+!docs/prototype-scope.md
+!docs/tester-alpha.md
+!docs/feedback-template.txt
+!docs/release-notes.md
+!docs/release-readiness.md

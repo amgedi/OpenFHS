@@ -1,0 +1,9 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..');
+function files(){const spec=JSON.parse(fs.readFileSync(path.join(root,'release-files.json'),'utf8').replace(/^\uFEFF/,''));const out=[...spec.files];function walk(dir){for(const entry of fs.readdirSync(path.join(root,dir),{withFileTypes:true})){const name=dir+'/'+entry.name;if(entry.isSymbolicLink())throw Error('Symlink not allowed: '+name);if(entry.isDirectory())walk(name);else out.push(name);}}for(const dir of spec.directories)walk(dir);return [...new Set(out)].sort();}
+function inventory(){return files().map(name=>({name,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,name))).digest('hex')}));}
+function check(){const findings=[];for(const name of files()){const file=path.join(root,name);if(!fs.existsSync(file))throw Error('Missing release file: '+name);if(!/\.(?:js|cjs|css|html|svg|md|txt|json|toml|ps1|cmd|cs|yml|png)$/.test(name)&&!['LICENSE','.gitignore'].includes(name))findings.push(name+': unreviewed file type');if(name.endsWith('.png'))continue;const text=fs.readFileSync(file,'utf8');for(const [rule,re]of [['private key',/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/],['credential token',/(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|sk_live_[A-Za-z0-9]{16,}|AKIA[0-9A-Z]{16})/],['personal absolute path',/[A-Z]:[\\/]Users[\\/][^\s"'<>]+/]])if(re.test(text))findings.push(name+': '+rule);}
+if(findings.length)throw Error(findings.join('\n'));return {files:files().length,scope:'Selected release files; heuristic secret screening is not a guarantee'};}
+if(require.main===module){check();if(process.argv.includes('--list'))console.log(files().join('\n'));else console.log(JSON.stringify({check:check(),inventory:inventory()},null,2));}
+module.exports={files,inventory,check,root};

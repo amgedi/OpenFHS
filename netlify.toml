@@ -1,0 +1,3 @@
+[build]
+  command = "node build-public.cjs"
+  publish = "dist/public-tester-alpha"
