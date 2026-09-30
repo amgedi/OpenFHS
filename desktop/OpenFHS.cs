@@ -148,7 +148,7 @@ internal static class OpenFHS
         string headers = "HTTP/1.1 " + status + (status == 200 ? " OK" : " Error") + "\r\n" +
             "Content-Type: " + contentType + "\r\nContent-Length: " + bytes.Length + "\r\n" +
             "Connection: close\r\nCache-Control: no-store\r\nX-Content-Type-Options: nosniff\r\n" +
-            "X-OpenFHS-Build: 0.5.8-alpha.10-offline\r\n" +
+            "X-OpenFHS-Build: 0.5.8-alpha.11-offline\r\n" +
             "Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'\r\n\r\n";
         byte[] encoded = Encoding.ASCII.GetBytes(headers); stream.Write(encoded, 0, encoded.Length);
         if (!head) stream.Write(bytes, 0, bytes.Length);

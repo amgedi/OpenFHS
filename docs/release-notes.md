@@ -1,4 +1,4 @@
-# OpenFHS v0.5.8-alpha.10 — Tester Alpha
+# OpenFHS v0.5.8-alpha.11 — Tester Alpha
 
 **Fictional-data-only usability pre-release.**
 
@@ -8,6 +8,14 @@ OpenFHS began with Feline Hyperesthesia Syndrome and is growing toward an Open F
 
 Approximately five people testing usability with invented cats and events. **Do not enter real medical or private information.** This is not research participation. OpenFHS does not diagnose FHS or other conditions, provide veterinary advice or a veterinary service, or claim clinical validation.
 
+## Changes since alpha.10
+
+- Theme-aware help, notification, error and dialog surfaces fix unreadable text in dark palettes.
+- The cat selector avatar is vertically centered.
+- Downloads use UTC timestamps and unique suffixes to avoid overwriting earlier copies, including repeated exports in the same second. Complete backup still saves all cats, drafts and clips in one file.
+- Updated main banner and optional GitHub Sponsors, Ko-fi and Buy Me a Coffee links.
+- No diary schema or import-format changes. Existing records remain compatible.
+
 ## Included
 
 Guided/full episode and daily forms; separate cat profiles; local draft recovery; correction history; JSON/CSV and readable reports; local practice clips; complete backups imported as distinct copies; keyboard and reduced-motion support; five translation previews.
@@ -16,9 +24,9 @@ This candidate adds clearer cat/date/entry identification during draft recovery,
 
 ## Downloads and running
 
-- `OpenFHS-Source-0.5.8-alpha.10.zip`: extract, install Node 22+ with npm, run `npm start`, open http://127.0.0.1:4317. No dependency installation required.
-- `OpenFHS-Offline-0.5.8-alpha.10.exe`: Windows unsigned local launcher. Close older OpenFHS tray apps first. Opens the default browser; use tray Exit to stop it. It uses separate browser storage from the Node preview. Do not bypass a security warning you do not understand.
-- `OpenFHS-Tester-Alpha-0.5.8-alpha.10.zip`: static hosting payload, not a Windows installer. No approved hosted URL exists yet.
+- `OpenFHS-Source-0.5.8-alpha.11.zip`: extract, install Node 22+ with npm, run `npm start`, open http://127.0.0.1:4317. No dependency installation required.
+- `OpenFHS-Offline-0.5.8-alpha.11.exe`: Windows unsigned local launcher. Close older OpenFHS tray apps first. Opens the default browser; use tray Exit to stop it. It uses separate browser storage from the Node preview. Do not bypass a security warning you do not understand.
+- `OpenFHS-Tester-Alpha-0.5.8-alpha.11.zip`: static hosting payload, not a Windows installer. The supplied Netlify site returned a site-not-found page during verification; use the download packages until hosting is verified.
 - `PROVENANCE.json` maps source and static files to SHA-256 hashes; `SHA256SUMS.txt` covers the release downloads. Hashes detect changes but are not publisher signatures.
 
 Use `START-HERE.md` / docs/tester-alpha.md for a 15–20 minute test. The feedback template is included. Back up any existing fictional diary before testing a new build; retain original clips.

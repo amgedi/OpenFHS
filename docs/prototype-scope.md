@@ -1,6 +1,6 @@
 # Prototype implementation and limits
 
-Application version: `0.5.8-alpha.10`, 28 September 2026. The existing diary-record schema stays `0.1.0-prototype` for compatibility. This is a narrow interaction prototype, not the complete Data Specification v0.1 and not pilot-ready research infrastructure.
+Application version: `0.5.8-alpha.11`, 28 September 2026. The existing diary-record schema stays `0.1.0-prototype` for compatibility. This is a narrow interaction prototype, not the complete Data Specification v0.1 and not pilot-ready research infrastructure.
 
 See [release notes](release-notes.md) for the current candidate. Its local privacy preferences, complete backup/copy-import, avatars and language previews do not establish participant readiness.
 

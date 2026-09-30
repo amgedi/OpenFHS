@@ -249,3 +249,11 @@ html[data-theme=arcade] .card,html[data-theme=arcade] .metric{box-shadow:4px 4px
 html[data-theme=arcade] .avatar-backdrop{fill:#38204c}
 html[data-theme=arcade] .scenic-dialog{--sky:#140c28;--paper:#140c28;--hill:#d63845;--hill-back:#6236a0;--sun:#ffe76b;--tree:#ffbc38}
 html[data-theme] .overview-metrics .metric{border-top-color:var(--green)}
+
+/* Help and feedback surfaces use paired theme colors, including dark arcade. */
+html[data-theme] .callout,html[data-theme] .notice{background:var(--light);color:var(--ink);border-color:var(--line)}
+html[data-theme] dialog:not(.scenic-dialog):not(.spotlight-tour){background:var(--paper);color:var(--ink)}
+html[data-theme] .error{background:var(--paper);color:var(--ink);border-color:var(--green)}
+.cat-select-control{display:flex;align-items:center;min-height:0}
+.cat-select-control #selected-avatar,.cat-select-control #selected-avatar svg{display:block}
+@media(forced-colors:active){html[data-theme] .callout,html[data-theme] .notice,html[data-theme] .error,html[data-theme] dialog:not(.scenic-dialog):not(.spotlight-tour){background:Canvas;color:CanvasText;border-color:CanvasText}}

@@ -2,6 +2,15 @@ const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),vm=require('node:vm');
 const C=require('../prototype/core.js');
+test('repeated downloads preserve extensions and never reuse a filename even at the same instant',()=>{
+ const context={window:{},crypto:require('node:crypto').webcrypto,Date:class extends Date{constructor(){super('2026-09-29T12:30:00.000Z');}}};
+ vm.runInNewContext(fs.readFileSync('prototype/backup.js','utf8'),context);
+ const names=Array.from({length:100},()=>context.window.OpenFHSBackup.uniqueFilename('openfhs-complete-backup.json'));
+ assert.equal(new Set(names).size,100);
+ for(const name of names){assert.match(name,/^openfhs-complete-backup-2026-09-29T12-30-00-000Z-.+\.json$/);assert.doesNotMatch(name,/[<>:"/\\|?*]/);}
+ assert.match(context.window.OpenFHSBackup.uniqueFilename('openfhs-report.html'),/\.html$/);
+ assert.match(context.window.OpenFHSBackup.uniqueFilename('openfhs-feedback.txt'),/\.txt$/);
+});
 test('pixel meadow never changes to arcade scenery between sessions; arcade always uses its own world',()=>{
  const source=fs.readFileSync('prototype/app.js','utf8');
  const landscape=source.slice(source.indexOf('function companionLandscape(){'),source.indexOf('  function catScene(){'));

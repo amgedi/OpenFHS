@@ -38,3 +38,6 @@ docs/*
 !docs/feedback-template.txt
 !docs/release-notes.md
 !docs/release-readiness.md
+
+# Netlify local project binding and credentials
+.netlify/

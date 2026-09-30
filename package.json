@@ -1,6 +1,6 @@
 {
   "name": "openfhs-local-prototype",
-  "version": "0.5.8-alpha.10",
+  "version": "0.5.8-alpha.11",
   "license": "AGPL-3.0-only",
   "private": true,
   "engines": { "node": ">=22" },

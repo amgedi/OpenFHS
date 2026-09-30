@@ -1,7 +1,14 @@
 window.OpenFHSBackup = (()=>{
  const LIMIT=150*1024*1024;
  const hash=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
- function download(content,name,type='application/json'){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
+ let downloadSequence=0;
+ function uniqueFilename(name){
+  const dot=name.lastIndexOf('.'),stem=dot>0?name.slice(0,dot):name,extension=dot>0?name.slice(dot):'';
+  const stamp=new Date().toISOString().replace(/[:.]/g,'-');
+  const random=new Uint32Array(1);crypto.getRandomValues(random);
+  return `${stem}-${stamp}-${(++downloadSequence).toString(36)}-${random[0].toString(36)}${extension}`;
+ }
+ function download(content,name,type='application/json'){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=uniqueFilename(name);document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
  async function create(state,preferences,media,drafts=[]){
   validateDrafts(drafts,state);
   if(media.length>200||['animals','baselines','episodes','daily_reports'].some(k=>state[k].length>10000))throw Error('This diary exceeds the prototype backup record limit. Export technical records and keep original videos; larger archival backups need a dedicated release.');
@@ -108,5 +115,5 @@ window.OpenFHSBackup = (()=>{
   // Once committed, cleanup failure must never roll back saved media.
   if(storage)try{storage.removeItem(JOURNAL);}catch{}
  }
- return {create,inspect,prepareImport,commitImport,recoverImport,recoveryStatus,download};
+ return {create,inspect,prepareImport,commitImport,recoverImport,recoveryStatus,download,uniqueFilename};
 })();
