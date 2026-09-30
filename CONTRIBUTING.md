@@ -1,10 +1,10 @@
 # Contributing to OpenFHS
 
-Help us make fictional feline observation tasks clear, reliable and accessible. The current alpha is not a research study or medical product.
+OpenFHS is still early, so useful contributions do not have to be huge. A confusing label, a broken recovery flow, an accessibility problem, or a good test can matter just as much as a new feature. The current alpha is not a research study or medical product.
 
 Use Node.js 22 or newer. Run `npm start` to open the local diary, `npm test` for checks, and `npm run build:public` for the allowlisted static package. No project dependencies need installing. See the README for addresses and restricted-environment testing.
 
-For a bug, send the app version, browser/device, fictional steps, expected result, actual result and whether recovery worked to openfhs@gmail.com. Once a public repository exists, ordinary bugs can use its issues. Security concerns belong in the private channel described in SECURITY.md.
+For a bug, send the app version, browser/device, fictional steps, expected result, actual result and whether recovery worked to openfhs@gmail.com, or open a GitHub Issue for ordinary bugs. If something just feels confusing, say that too. Security concerns belong in the private channel described in SECURITY.md.
 
 Use synthetic examples only. Never upload private cat records, participant information, medical documents, household videos, credentials or diary backups to public issues or commits. Review screenshots before sharing.
 

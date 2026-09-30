@@ -24,7 +24,7 @@ function createSupportService({apiKey='',sender='',origin='',fetchImpl=fetch,now
   rates.forEach((rate,i)=>{rate.count++;attempts.set(rateKeys[i],rate);});
   const reference='FHS-'+body.requestId;
   const result=(async()=>{try{
-   await send(reference+'-report','openfhs@gmail.com','OpenFHS support '+reference+' — '+body.kind,report,email);
+   await send(reference+'-report','openfhs@gmail.com','OpenFHS support '+reference+': '+body.kind,report,email);
    let receiptQueued=false;
    try{await send(reference+'-receipt',email,'We received your OpenFHS support request',`Thank you for contacting OpenFHS. Your request has been accepted by our support mail service.\n\nReference: ${reference}\n\nA person has not reviewed it yet. We are a small volunteer project, so replies may take time. You can reply to this email with a correction or follow-up.\n\nDo not send passwords, recovery phrases, private diary backups, or videos. This inbox is not monitored for urgent veterinary care.\n\nOpenFHS\nopenfhs@gmail.com`,'openfhs@gmail.com');receiptQueued=true;}catch{}
    return {status:202,body:{accepted:true,reference,receiptQueued}};

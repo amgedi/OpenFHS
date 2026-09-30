@@ -40,4 +40,4 @@ const server = http.createServer(async (req, res) => {
 server.on('error', error => { console.error('Could not open preview:', error.message); process.exitCode = 1; });
 const port=Number(process.env.OPENFHS_PORT||4317);
 if(!Number.isInteger(port)||port<1024||port>65535)throw Error('Invalid preview port.');
-server.listen(port, '127.0.0.1', () => console.log(`OpenFHS practice diary: http://127.0.0.1:${port} — keep this window open. Ctrl+C stops it.`));
+server.listen(port, '127.0.0.1', () => console.log(`OpenFHS practice diary: http://127.0.0.1:${port} . keep this window open. Ctrl+C stops it.`));

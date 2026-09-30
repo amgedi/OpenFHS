@@ -59,7 +59,7 @@ internal static class OpenFHS
                     menu.Items.Add("Exit OpenFHS", null, (sender, e) => Application.Exit());
                     using (var iconStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("OpenFHS.icon"))
                     using (var icon = new Icon(iconStream)) tray.Icon = (Icon)icon.Clone();
-                    tray.Text = "OpenFHS — offline practice diary";
+                    tray.Text = "OpenFHS | offline practice diary";
                     tray.ContextMenuStrip = menu; tray.Visible = true;
                     tray.DoubleClick += (sender, e) => Process.Start(Address);
                     Process.Start(Address);

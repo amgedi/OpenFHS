@@ -1,4 +1,4 @@
-# OpenFHS Data Specification v0.1 — draft
+# OpenFHS Data Specification v0.1 : draft
 
 Status: proposed logical data contract for collaborator review. No clinical validation or executable schema is implied. Dates use ISO 8601. Field names below are proposed stable export names.
 
