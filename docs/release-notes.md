@@ -49,7 +49,8 @@ If saving fails, keep the form open, copy unsaved answers and export existing re
 
 Send version, device/browser, fictional reproduction steps, expected/actual behaviour and whether recovery worked to openfhs@gmail.com. No private records, backups, household videos or credentials. Report security issues privately; ordinary issues can use [GitHub issues](https://github.com/amgedi/OpenFHS/issues). We prioritize data loss, blocked tasks and repeated confusion over visual preferences.
 
+## Verification
 
-## Verification and licensing
+All 61 tests passed, Linux/Windows CI succeeded, and the ten release downloads matched verified checksums. See [testing status](release-readiness.md) for coverage and limitations, and [build instructions](building.md) to reproduce checks at the release tag.
 
-Use the versioned release provenance and checksums to verify downloads. The review is partial and does not establish security or accessibility certification. OpenFHS uses GNU AGPLv3 only (AGPL-3.0-only); corresponding source and license are supplied.
+The official release is GNU AGPLv3 only (`AGPL-3.0-only`). Its corresponding source and license are included. An approved privacy cleanup removed internal documents from history and repackaged the source archive. Use the updated provenance and checksums; the executable and static application package are unchanged.
