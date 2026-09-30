@@ -23,7 +23,6 @@
     "preview-public.cjs",
     "package-release.ps1",
     "Start OpenFHS.cmd",
-    "Start OpenFHS Offline.cmd",
     "docs/data-specification-v0.1.md",
     "docs/privacy.md",
     "docs/migration-policy.md",

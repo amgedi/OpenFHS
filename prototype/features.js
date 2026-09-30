@@ -7,7 +7,7 @@
   const CONSENT_VERSION = 'local-video-v1';
   const CONSENT_TEXT = 'I own this practice video or have its owner’s permission. I permit OpenFHS to store it in this browser for my private diary only. This does not permit research, model training, or public sharing.';
   const MAX_BYTES = 50 * 1024 * 1024;
-  const WORDS = { yes: 'Yes — observed', no: 'No — watched for and absent', unknown: 'Unknown', not_observed: 'Not observed', not_answered: 'Not answered', not_asked: 'Not asked in this version', declined: 'Prefer not to answer', whole: 'From beginning to end', part: 'Only part of the episode', reported: 'History reported', none_reported: 'None reported', direct_observation: 'Direct observation', historical_recollection: 'Remembered afterward', video: 'Watched on video', indoor: 'Indoors', outdoor: 'Outdoors', both: 'Indoors and outdoors' };
+  const WORDS = { yes: 'Yes: observed', no: 'No: watched for and absent', unknown: 'Unknown', not_observed: 'Not observed', not_answered: 'Not answered', not_asked: 'Not asked in this version', declined: 'Prefer not to answer', whole: 'From beginning to end', part: 'Only part of the episode', reported: 'History reported', none_reported: 'None reported', direct_observation: 'Direct observation', historical_recollection: 'Remembered afterward', video: 'Watched on video', indoor: 'Indoors', outdoor: 'Outdoors', both: 'Indoors and outdoors' };
   const words = value => value == null || value === '' ? 'Not provided' : WORDS[value] || String(value).replaceAll('_', ' ');
   const escape = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
   function validateVideo(file, consent) {
@@ -86,7 +86,7 @@
       }
       const videos = media.filter(r => r.animal_id === a.id);
       paragraphs.push('\nLocal video attachments: ' + videos.length + '. Files are not included in this report.');
-      for (const video of videos) if (includeNotes) paragraphs.push('• ' + video.title + ' — private local storage only; no research, training, or public-sharing permission.');
+      for (const video of videos) if (includeNotes) paragraphs.push('• ' + video.title + ' - private local storage only; no research, training, or public-sharing permission.');
     }
     return paragraphs.join('\n');
   }
