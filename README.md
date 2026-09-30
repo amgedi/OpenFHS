@@ -6,7 +6,7 @@
 
 OpenFHS began with Feline Hyperesthesia Syndrome and is growing toward an Open Feline Health Standard. It is experimental open-source software for structured feline-health observation, designed to preserve uncertainty, missingness, provenance, corrections and observation coverage.
 
-**0.5.8-alpha.11 — fictional-data-only usability candidate for about five testers.** Do not enter real medical or private information. OpenFHS is not diagnostic AI, veterinary advice, a veterinary service, clinically validated software, or a research study.
+**0.5.8-alpha.11 — fictional-data-only usability pre-release for about five testers.** Do not enter real medical or private information. OpenFHS is not diagnostic AI, veterinary advice, a veterinary service, clinically validated software, or a research study.
 
 ## Why this exists
 
@@ -35,7 +35,7 @@ From source, with Node.js 22+ and npm:
 npm start
 ```
 
-Open **http://127.0.0.1:4317**. No dependencies need installing. Keep the terminal open; Ctrl+C stops it. Windows users can use `Start OpenFHS.cmd`. A versioned unsigned Windows launcher is prepared separately; see the tester instructions before running it. The supplied Netlify address is still being verified; use the versioned GitHub downloads for now.
+Open **http://127.0.0.1:4317**. No dependencies need installing. Keep the terminal open; Ctrl+C stops it. Windows users can use `Start OpenFHS.cmd`. A versioned unsigned Windows launcher is prepared separately; see the tester instructions before running it. No hosted demo is currently treated as verified; use the versioned GitHub downloads for now.
 
 ## Your local data
 
