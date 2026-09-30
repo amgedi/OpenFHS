@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/openfhs-banner.png" width="100%" alt="Building an Open Standard for Feline Health" />
+<img src="docs/assets/openfhs-banner-animated.svg" width="100%" alt="Building an Open Standard for Feline Health" />
 
 <br/>
 
