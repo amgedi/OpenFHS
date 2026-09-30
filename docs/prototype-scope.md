@@ -2,7 +2,7 @@
 
 Application version: `0.5.8-alpha.11`, 28 September 2026. The existing diary-record schema stays `0.1.0-prototype` for compatibility. This is a narrow interaction prototype, not the complete Data Specification v0.1 and not pilot-ready research infrastructure.
 
-See [release notes](release-notes.md) for the current candidate. Its local privacy preferences, complete backup/copy-import, avatars and language previews do not establish participant readiness.
+See [release notes](release-notes.md) for the current pre-release. Its local privacy preferences, complete backup/copy-import, avatars and language previews do not establish participant readiness.
 
 ## Implemented
 
@@ -27,7 +27,7 @@ The executable data rules are in `prototype/core.js`; `DICTIONARY` is included i
 
 Participant authentication, granular research-consent enforcement, study withdrawal, clinical verification, public or approved research release, server media upload, household relationships/access, multiple caregivers, field-level provenance overrides, continuous timed coverage, medication/administration tables, clinical cohorts/assessments, age/weight/extended baseline, inter-rater annotation, managed desktop data storage/restore, and local model training.
 
-The synthetic flag labels intended use; it cannot determine whether a user entered real information. The private-storage checkbox gates saving a local practice clip but does not establish a research consent/access-control system. The original local-storage permission record does not grant research rights. Separate versioned future-use preferences can be changed and organize local lists; they do not enable uploads or research enrollment. Do not use it for participant data. Only the allowlisted static tester package is intended for a later fictional-data public alpha; the support backend is not.
+The synthetic flag labels intended use; it cannot determine whether a user entered real information. The private-storage checkbox gates saving a local practice clip but does not establish a research consent/access-control system. The original local-storage permission record does not grant research rights. Separate versioned future-use preferences can be changed and organize local lists; they do not enable uploads or research enrollment. Do not use it for participant data. The allowlisted static tester package is intended for fictional-data-only public testing; the support backend is separate and disabled in that package.
 
 Daily reconciliation compares entered local date labels; it does not resolve travel, incompatible timezones, unknown event dates, or duplicate reports from different observers. These require later modeling. No rates per observation hour, severity scores, or clinical outcome conclusions are produced.
 
@@ -43,4 +43,4 @@ This deliberately precedes the relational-database application proposed in the r
 
 With Node 22 or newer, run `npm test` or `node --test tests/*.test.cjs`. Restricted environments on Node 24 can use `npm run test:restricted` to avoid child-process spawning. Run `node server.cjs` to preview at port 4317. Stop that process with Ctrl+C.
 
-Tests cover response-state preservation, zero versus missing, count reconciliation, date precision/offsets, invalid quantities, corrections, referential integrity, CSV/HTML handling, scoped reports, and local video-permission rules. Run all test files using `npm test`. Participant consent/export restrictions in the full specification remain unimplemented and untested; passing these checks does not meet a research-pilot release gate. See [verification notes](release-readiness.md).
+Tests cover response-state preservation, zero versus missing, count reconciliation, date precision/offsets, invalid quantities, corrections, referential integrity, CSV/HTML handling, scoped reports, and local video-permission rules. Run all test files using `npm test`. Participant consent/export restrictions in the full specification remain unimplemented and untested; passing these checks does not establish research-pilot readiness. See [verification notes](release-readiness.md).
