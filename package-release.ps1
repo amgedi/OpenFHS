@@ -29,5 +29,5 @@ try {
  @{version=$version;license='AGPL-3.0-only';sourceCommit=$sourceCommit;source=$source.inventory;static=(Get-Content dist/public-tester-alpha/release-manifest.json -Raw | ConvertFrom-Json);node=(& node --version);windowsSigned=$false} | ConvertTo-Json -Depth 8 | Set-Content (Join-Path $releaseDir 'PROVENANCE.json') -Encoding utf8
  Get-ChildItem -LiteralPath $releaseDir -File | ForEach-Object {$hash=Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256;"$($hash.Hash.ToLower())  $($_.Name)"} | Set-Content (Join-Path $releaseDir 'SHA256SUMS.txt') -Encoding utf8
  & ./scripts/verify-release.ps1
- Write-Output "Prepared and verified local candidate: $releaseDir"
+ Write-Output "Prepared and verified release artifacts: $releaseDir"
 } finally {Pop-Location}
