@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420" role="img" aria-labelledby="title desc">
+  <title id="title">OpenFHS</title>
+  <desc id="desc">Building an Open Standard for Feline Health</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6F4E9"/>
+      <stop offset="45%" stop-color="#E8EEDC"/>
+      <stop offset="100%" stop-color="#D7DFC6"/>
+      <animate attributeName="x1" values="0%;8%;0%" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="100%;92%;100%" dur="14s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="hill1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#AAB994" stop-opacity=".58"/>
+      <stop offset="100%" stop-color="#6F875F" stop-opacity=".34"/>
+    </linearGradient>
+
+    <linearGradient id="hill2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D1DBBF" stop-opacity=".78"/>
+      <stop offset="100%" stop-color="#93AC80" stop-opacity=".42"/>
+    </linearGradient>
+
+    <linearGradient id="cat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7E9272"/>
+      <stop offset="100%" stop-color="#52694D"/>
+    </linearGradient>
+
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".92"/>
+      <stop offset="100%" stop-color="#F2F4E9" stop-opacity=".86"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#32442F" flood-opacity=".13"/>
+    </filter>
+
+    <clipPath id="round">
+      <rect width="1400" height="420" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1400" height="420" fill="url(#bg)"/>
+
+    <circle cx="1215" cy="54" r="155" fill="#FFFFFF" opacity=".16">
+      <animate attributeName="r" values="145;165;145" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".12;.22;.12" dur="8s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="170" cy="390" r="185" fill="#FFFFFF" opacity=".12">
+      <animate attributeName="cx" values="145;190;145" dur="15s" repeatCount="indefinite"/>
+    </circle>
+
+    <path d="M-40 300 C170 230 330 320 520 270 C760 208 940 282 1110 230 C1260 184 1390 221 1460 246 L1460 430 L-40 430 Z" fill="url(#hill2)">
+      <animateTransform attributeName="transform" type="translate" values="-20 0;28 -5;-20 0" dur="12s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M-80 340 C140 275 350 360 570 318 C780 278 960 350 1160 293 C1275 260 1395 278 1480 310 L1480 440 L-80 440 Z" fill="url(#hill1)">
+      <animateTransform attributeName="transform" type="translate" values="35 0;-25 4;35 0" dur="16s" repeatCount="indefinite"/>
+    </path>
+
+    <g opacity=".85">
+      <path d="M80 250 C72 214 86 181 108 154" fill="none" stroke="#6F875F" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="95" cy="186" rx="16" ry="34" fill="#93AC80" transform="rotate(-30 95 186)">
+        <animateTransform attributeName="transform" additive="sum" type="rotate" values="-4 95 186;5 95 186;-4 95 186" dur="5s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="119" cy="163" rx="16" ry="34" fill="#7F986F" transform="rotate(28 119 163)">
+        <animateTransform attributeName="transform" additive="sum" type="rotate" values="3 119 163;-5 119 163;3 119 163" dur="6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <g opacity=".85">
+      <path d="M1320 298 C1312 254 1329 216 1352 185" fill="none" stroke="#6F875F" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="1336" cy="232" rx="16" ry="34" fill="#93AC80" transform="rotate(-27 1336 232)">
+        <animateTransform attributeName="transform" additive="sum" type="rotate" values="-4 1336 232;4 1336 232;-4 1336 232" dur="5.5s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="1362" cy="205" rx="16" ry="34" fill="#7F986F" transform="rotate(30 1362 205)">
+        <animateTransform attributeName="transform" additive="sum" type="rotate" values="4 1362 205;-4 1362 205;4 1362 205" dur="6.5s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <g filter="url(#shadow)" transform="translate(902 83)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="5.8s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="320" height="205" rx="26" fill="url(#card)" stroke="#CAD5B9" stroke-width="4"/>
+        <rect x="34" y="34" width="82" height="72" rx="14" fill="#D9E2CA"/>
+        <path d="M63 78 L69 56 L82 67 L96 56 L103 78 C103 95 63 95 63 78 Z" fill="#6F875F"/>
+        <rect x="143" y="42" width="114" height="15" rx="7" fill="#B6C5A3"/>
+        <rect x="143" y="70" width="87" height="13" rx="6" fill="#CAD6B8"/>
+        <rect x="143" y="94" width="72" height="13" rx="6" fill="#D4DEC7"/>
+        <rect x="35" y="137" width="140" height="12" rx="6" fill="#CFDAC0"/>
+        <rect x="35" y="162" width="112" height="12" rx="6" fill="#D8E1CC"/>
+        <rect x="205" y="125" width="22" height="50" rx="5" fill="#93AC80"/>
+        <rect x="239" y="107" width="22" height="68" rx="5" fill="#7F986F"/>
+        <rect x="273" y="84" width="22" height="91" rx="5" fill="#6F875F"/>
+      </g>
+    </g>
+
+    <g transform="translate(935 228)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4.2s" repeatCount="indefinite"/>
+        <ellipse cx="110" cy="108" rx="145" ry="25" fill="#32442F" opacity=".10"/>
+        <path d="M58 69 C41 42 42 10 59 -19 L87 8 C112 -1 142 2 167 16 L195 -10 C206 24 203 58 187 84 C170 110 133 123 97 116 C77 112 65 95 58 69 Z" fill="url(#cat)"/>
+        <path d="M69 10 L58 -15 L87 7 Z" fill="#E8B0A7"/>
+        <path d="M172 15 L194 -7 L186 25 Z" fill="#E8B0A7"/>
+        <path d="M76 84 C100 105 147 109 182 92 C229 68 247 45 264 61 C285 81 255 132 213 142 C160 155 94 150 58 124 C44 114 50 96 76 84 Z" fill="#52694D"/>
+        <path d="M229 113 C289 112 312 89 298 65 C290 52 275 55 273 67 C270 84 283 90 296 83" fill="none" stroke="#52694D" stroke-width="22" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" values="-2 260 108;4 260 108;-2 260 108" dur="3.8s" repeatCount="indefinite"/>
+        </path>
+        <ellipse cx="93" cy="135" rx="34" ry="16" fill="#7E9272"/>
+        <ellipse cx="147" cy="137" rx="34" ry="16" fill="#7E9272"/>
+        <path d="M91 56 Q104 67 117 56" fill="none" stroke="#17352E" stroke-width="6" stroke-linecap="round"/>
+        <path d="M145 56 Q158 67 171 56" fill="none" stroke="#17352E" stroke-width="6" stroke-linecap="round"/>
+        <path d="M128 72 L138 78 L128 84 L118 78 Z" fill="#17352E"/>
+        <path d="M128 84 Q127 96 115 96 M128 84 Q129 96 141 96" fill="none" stroke="#17352E" stroke-width="5" stroke-linecap="round"/>
+        <path d="M83 82 L47 76 M84 92 L49 94 M174 81 L210 74 M174 92 L211 92" fill="none" stroke="#17352E" stroke-width="4" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <g fill="#7F986F" opacity=".86">
+      <path d="M805 95 C835 62 873 70 892 54 C892 85 867 106 833 109 Z">
+        <animateTransform attributeName="transform" type="translate" values="0 0;12 10;0 0" dur="6s" repeatCount="indefinite"/>
+      </path>
+      <path d="M1244 130 C1275 100 1300 109 1320 96 C1316 126 1292 145 1262 143 Z">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-10 13;0 0" dur="7.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M760 236 C783 213 809 219 825 208 C823 233 804 247 780 246 Z">
+        <animateTransform attributeName="transform" type="translate" values="0 0;10 8;0 0" dur="5.4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/>
+      <text x="450" y="132" text-anchor="middle" fill="#17352E" font-family="Georgia, 'Times New Roman', serif" font-size="88" font-weight="700">OpenFHS</text>
+      <text x="450" y="183" text-anchor="middle" fill="#3F5B3B" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700">Building an Open Standard for Feline Health</text>
+      <text x="450" y="231" text-anchor="middle" fill="#58704F" font-family="Arial, Helvetica, sans-serif" font-size="21">Structured observations • privacy-minded • open source</text>
+      <rect x="292" y="259" width="316" height="4" rx="2" fill="#93AC80" opacity=".75">
+        <animate attributeName="width" values="0;316" dur="1.1s" begin=".7s" fill="freeze"/>
+      </rect>
+      <text x="450" y="305" text-anchor="middle" fill="#6A5A3F" font-family="Arial, Helvetica, sans-serif" font-size="18">Fictional-data alpha • not diagnostic or clinically validated</text>
+    </g>
+  </g>
+</svg>
