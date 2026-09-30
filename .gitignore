@@ -38,6 +38,19 @@ docs/*
 !docs/feedback-template.txt
 !docs/release-notes.md
 !docs/release-readiness.md
+!docs/building.md
 
 # Netlify local project binding and credentials
 .netlify/
+
+# Private maintainer notes, editor state and local export/cache files.
+.openfhs-internal/
+.vscode/
+.idea/
+.cache/
+*.swp
+*.swo
+openfhs-fictional-*.html
+openfhs-support-report*.txt
+openfhs-feedback-template*.txt
+openfhs-unreadable-draft*.json

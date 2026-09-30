@@ -32,6 +32,7 @@
     "docs/feedback-template.txt",
     "docs/release-notes.md",
     "docs/release-readiness.md",
+    "docs/building.md",
     "NOTICE.md"
   ]
 }

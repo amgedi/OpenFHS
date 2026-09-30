@@ -4,7 +4,11 @@
 
 ## Start (2 minutes)
 
-Use the exact candidate supplied by the maintainer. Record its version, your browser/device, language and theme. No hosted URL is approved yet.
+Use [OpenFHS v0.5.8-alpha.11](https://github.com/amgedi/OpenFHS/releases/tag/v0.5.8-alpha.11), the current official usability pre-release. Record the version shown in the app, your browser/device, language and theme. The hosted demo is not currently verified.
+
+- **Windows:** download `OpenFHS-Offline-0.5.8-alpha.11.exe`.
+- **macOS/Linux or developers:** download `OpenFHS-Source-0.5.8-alpha.11.zip` and follow the source instructions below.
+- `OpenFHS-Tester-Alpha-0.5.8-alpha.11.zip` is for static hosting, not an installer; do not open its files directly as your normal testing method.
 
 Browser source: install Node 22+ with npm, open a terminal in the extracted source folder, run `npm start`, and open http://127.0.0.1:4317. No dependency installation is needed. Stop with Ctrl+C.
 
@@ -21,7 +25,7 @@ Windows: close any older OpenFHS tray app, then open the versioned offline EXE. 
 
 ## Send feedback (1–2 minutes)
 
-Use Help & support to prepare/download a report, or copy [feedback-template.txt](feedback-template.txt). Send reviewed fictional feedback to openfhs@gmail.com. In-app delivery is disabled in the public alpha. Public GitHub issues may be used only after the maintainer opens the repository for testers; security reports stay private.
+Use Help & support to prepare/download a report, or copy [feedback-template.txt](feedback-template.txt). Send reviewed fictional feedback to openfhs@gmail.com. In-app delivery is disabled in the public alpha. Ordinary bugs can use [GitHub issues](https://github.com/amgedi/OpenFHS/issues); security reports stay private.
 
 Tell us the hardest step, unclear words, whether you knew what saved, and whether recovery retained answers. Give exact steps for bugs. Review screenshots for private information. Never attach private records, household videos or credentials.
 

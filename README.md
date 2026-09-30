@@ -6,7 +6,7 @@
 
 OpenFHS began with Feline Hyperesthesia Syndrome and is growing toward an Open Feline Health Standard. It is experimental open-source software for structured feline-health observation, designed to preserve uncertainty, missingness, provenance, corrections and observation coverage.
 
-**0.5.8-alpha.11 — fictional-data-only usability candidate for about five testers.** Do not enter real medical or private information. OpenFHS is not diagnostic AI, veterinary advice, a veterinary service, clinically validated software, or a research study.
+**[0.5.8-alpha.11 — public usability pre-release](https://github.com/amgedi/OpenFHS/releases/tag/v0.5.8-alpha.11) for about five testers, using fictional data only.** Do not enter real medical or private information. OpenFHS is not diagnostic AI, veterinary advice, a veterinary service, clinically validated software, or a research study.
 
 ## Why this exists
 
@@ -25,9 +25,13 @@ There are no accounts, cloud database, automatic diary uploads, diagnostic model
 
 ![Fictional Juniper diary showing check-in coverage in the Breezy Park theme](docs/assets/alpha-overview.png)
 
+Representative fictional-data screenshot from alpha.9; current themes and some controls have changed.
+
 ## Try it safely
 
 Use only invented cats and events. Follow the [15–20 minute tester script](docs/tester-alpha.md) and [feedback template](docs/feedback-template.txt).
+
+**Windows testers:** download `OpenFHS-Offline-0.5.8-alpha.11.exe` from the [official release](https://github.com/amgedi/OpenFHS/releases/tag/v0.5.8-alpha.11). Close older OpenFHS tray apps before launching it. The EXE is unsigned; see the tester instructions if your operating system warns about it. Other platforms can run the source package below. The tester ZIP is a static-hosting package, not an installer. The hosted demo is not currently verified.
 
 From source, with Node.js 22+ and npm:
 
@@ -35,7 +39,7 @@ From source, with Node.js 22+ and npm:
 npm start
 ```
 
-Open **http://127.0.0.1:4317**. No dependencies need installing. Keep the terminal open; Ctrl+C stops it. Windows users can use `Start OpenFHS.cmd`. A versioned unsigned Windows launcher is prepared separately; see the tester instructions before running it. The supplied Netlify address is still being verified; use the versioned GitHub downloads for now.
+Open **http://127.0.0.1:4317**. No dependencies need installing. Keep the terminal open; Ctrl+C stops it. Windows users can use `Start OpenFHS.cmd`. A versioned unsigned Windows launcher is prepared separately; see the tester instructions before running it. Use the versioned GitHub downloads while hosting remains unverified.
 
 ## Your local data
 
@@ -57,6 +61,6 @@ The repository is in **feature freeze**. Help with recovery, accessibility, word
 
 The longer-term aim is interoperable observation tools and carefully reviewed feline-health standards, developed with caregivers, veterinarians, researchers and open-source contributors. That is a direction, not an adopted standard or a claim of scientific validation. AI experiments and participant infrastructure are outside this release.
 
-[Data specification](docs/data-specification-v0.1.md) · [Known limitations and release notes](docs/release-notes.md) · [Release-readiness evidence](docs/release-readiness.md)
+[Data specification](docs/data-specification-v0.1.md) · [Known limitations and release notes](docs/release-notes.md) · [Testing status](docs/release-readiness.md) · [Build instructions](docs/building.md)
 
 [GNU AGPLv3](LICENSE) (AGPL-3.0-only) covers OpenFHS software and documentation and allows commercial use subject to its terms. See [project identity and notices](NOTICE.md). It grants no rights to anyone's private records or videos. Optional [GitHub Sponsors](https://github.com/sponsors/amgedi), [Ko-fi](https://ko-fi.com/openfhs) or [Buy Me a Coffee](https://buymeacoffee.com/openfhs) support does not affect diary features or privacy choices.

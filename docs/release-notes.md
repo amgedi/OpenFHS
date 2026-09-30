@@ -20,7 +20,7 @@ Approximately five people testing usability with invented cats and events. **Do 
 
 Guided/full episode and daily forms; separate cat profiles; local draft recovery; correction history; JSON/CSV and readable reports; local practice clips; complete backups imported as distinct copies; keyboard and reduced-motion support; five translation previews.
 
-This candidate adds clearer cat/date/entry identification during draft recovery, public repository materials, tester instructions, CI, an explicit source-file inventory and verified artifact provenance. No major feature or storage-schema migration is introduced.
+Alpha.11 retains recovery context, correction history and verified artifact provenance. No storage-schema migration is introduced.
 
 ## Downloads and running
 
@@ -47,7 +47,7 @@ Use `START-HERE.md` / docs/tester-alpha.md for a 15–20 minute test. The feedba
 
 If saving fails, keep the form open, copy unsaved answers and export existing records; do not clear browser data. For an interrupted import, keep the backup and open Settings → Import recovery. Close the other diary tab if the app reports a tab conflict.
 
-Send version, device/browser, fictional reproduction steps, expected/actual behaviour and whether recovery worked to openfhs@gmail.com. No private records, backups, household videos or credentials. Report security issues privately; ordinary issues may use GitHub once approved for testers. We prioritize data loss, blocked tasks and repeated confusion over visual preferences.
+Send version, device/browser, fictional reproduction steps, expected/actual behaviour and whether recovery worked to openfhs@gmail.com. No private records, backups, household videos or credentials. Report security issues privately; ordinary issues can use [GitHub issues](https://github.com/amgedi/OpenFHS/issues). We prioritize data loss, blocked tasks and repeated confusion over visual preferences.
 
 
 ## Verification and licensing
