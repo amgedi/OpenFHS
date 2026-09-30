@@ -57,6 +57,6 @@ The repository is in **feature freeze**. Help with recovery, accessibility, word
 
 The longer-term aim is interoperable observation tools and carefully reviewed feline-health standards, developed with caregivers, veterinarians, researchers and open-source contributors. That is a direction, not an adopted standard or a claim of scientific validation. AI experiments and participant infrastructure are outside this release.
 
-[Data specification](docs/data-specification-v0.1.md) · [Known limitations and release notes](docs/release-notes.md) · [Release-readiness evidence](docs/release-readiness.md)
+[Data specification](docs/data-specification-v0.1.md) · [Known limitations and release notes](docs/release-notes.md) · [Testing status](docs/release-readiness.md)
 
 [GNU AGPLv3](LICENSE) (AGPL-3.0-only) covers OpenFHS software and documentation and allows commercial use subject to its terms. See [project identity and notices](NOTICE.md). It grants no rights to anyone's private records or videos. Optional [GitHub Sponsors](https://github.com/sponsors/amgedi), [Ko-fi](https://ko-fi.com/openfhs) or [Buy Me a Coffee](https://buymeacoffee.com/openfhs) support does not affect diary features or privacy choices.
