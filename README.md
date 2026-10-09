@@ -4,10 +4,20 @@
 
 <br/>
 
-[![Version](https://img.shields.io/badge/Alpha-0.5.8--alpha.11-58704F?style=for-the-badge&logo=github)](https://github.com/amgedi/OpenFHS/releases/tag/v0.5.8-alpha.11)
-[![License](https://img.shields.io/badge/License-AGPLv3-806B4F?style=for-the-badge)](LICENSE)
-[![Tests](https://img.shields.io/github/actions/workflow/status/amgedi/OpenFHS/validate.yml?branch=main&style=for-the-badge&label=Tests&color=6F875F)](https://github.com/amgedi/OpenFHS/actions)
-[![Local First](https://img.shields.io/badge/Storage-Local_First-725D45?style=for-the-badge)](docs/privacy.md)
+[![Download Alpha](https://img.shields.io/badge/Download-Alpha_0.5.8--alpha.11-58704F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/amgedi/OpenFHS/releases/tag/v0.5.8-alpha.11)
+[![Tester Guide](https://img.shields.io/badge/Tester_Guide-Start_Here-6F875F?style=for-the-badge&logo=readthedocs&logoColor=white)](docs/tester-alpha.md)
+[![Report a Bug](https://img.shields.io/badge/Report-Bug-876B52?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amgedi/OpenFHS/issues/new)
+[![Security](https://img.shields.io/badge/Security-Report_Privately-725D45?style=for-the-badge&logo=github&logoColor=white)](SECURITY.md)
+
+<br/>
+
+[![Version](https://img.shields.io/badge/Alpha-0.5.8--alpha.11-58704F?style=flat-square)](https://github.com/amgedi/OpenFHS/releases/tag/v0.5.8-alpha.11)
+[![Tests](https://img.shields.io/github/actions/workflow/status/amgedi/OpenFHS/validate.yml?branch=main&style=flat-square&label=Tests&color=6F875F)](https://github.com/amgedi/OpenFHS/actions/workflows/validate.yml)
+[![CodeQL](https://img.shields.io/github/actions/workflow/status/amgedi/OpenFHS/codeql.yml?branch=main&style=flat-square&label=CodeQL)](https://github.com/amgedi/OpenFHS/actions/workflows/codeql.yml)
+[![License](https://img.shields.io/badge/License-AGPL--3.0--only-806B4F?style=flat-square)](LICENSE)
+[![Local First](https://img.shields.io/badge/Storage-Local_First-725D45?style=flat-square)](docs/privacy.md)
+
+[**Why OpenFHS**](#-why-openfhs-exists) · [**Try it safely**](#-try-it-safely) · [**Privacy**](docs/privacy.md) · [**Contributing**](CONTRIBUTING.md) · [**Security**](SECURITY.md) · [**Release notes**](docs/release-notes.md)
 
 **OpenFHS started with Feline Hyperesthesia Syndrome and is growing toward an Open Feline Health Standard.**
 
@@ -143,7 +153,7 @@ The last command previews the allowlisted static build at **http://127.0.0.1:431
 
 On Windows, `./package-release.ps1` builds fresh source, static, and EXE artifacts with provenance and checksums. `./scripts/verify-release.ps1` checks them against source. Existing release folders are immutable.
 
-The repository is in **feature freeze**. Help with recovery, accessibility, wording, tests, and documentation. Use fictional bug reports. Send security concerns privately to **openfhs@gmail.com**.
+The repository is in **feature freeze**. Help with recovery, accessibility, wording, tests, and documentation. Use fictional bug reports. Send security concerns through the private reporting steps in [SECURITY.md](SECURITY.md).
 
 [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [Scope](docs/prototype-scope.md) · [Build and release verification](docs/building.md)
 
