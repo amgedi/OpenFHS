@@ -1,15 +1,30 @@
 name: Validate alpha
-on: [push, pull_request, workflow_dispatch]
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
 permissions:
   contents: read
+
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -19,4 +34,5 @@ jobs:
       - if: runner.os == 'Windows'
         shell: pwsh
         run: ./desktop/build-windows.ps1
-# Validation only. No publishing, deployment, release creation or write token.
+
+# Validation only. No publishing, deployment, release creation, or write token.
