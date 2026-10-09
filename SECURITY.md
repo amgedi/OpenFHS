@@ -1,15 +1,55 @@
 # Security and privacy reporting
 
-OpenFHS is experimental and fictional-data-only. It is not participant-ready or professionally security-certified. No guaranteed response time or dedicated security team exists.
+OpenFHS is experimental and currently intended for fictional-data testing. It is not professionally security-certified and there is no dedicated security team or guaranteed response time.
 
-Report suspected security/privacy issues privately to **openfhs@gmail.com**. Include the affected version, a concise explanation and synthetic reproduction steps. Do not post sensitive exploit details, credentials, private records or household videos in public issues. Do not send actual private data to demonstrate a problem. Urgent veterinary concerns are outside this channel.
+## Report a vulnerability privately
 
-## Boundaries to review
+Please do not post exploit details, credentials, private records, household videos, or other sensitive material in a public issue.
 
-The public tester package is static; records and media remain in browser storage. File imports, free text, exports and media metadata are untrusted inputs. Local preview/desktop servers should expose only allowlisted assets on loopback. Optional email support is separate and disabled in the public package.
+Preferred reporting path:
 
-Important properties include safe rendering, selected-cat export isolation, independent sharing preferences, validated imports that preserve originals, fail-closed consent eligibility, and no unintended secret/private-file publication. Meaningful findings should explain an actual attacker-controlled path and impact. No category is excluded merely because this is a prototype.
+1. Open the repository **Security** tab.
+2. Use **Report a vulnerability** if GitHub private vulnerability reporting is available.
+3. Include the affected version or commit, a concise explanation of the boundary that failed, expected impact, and synthetic reproduction steps.
+4. Use fictional or minimized data. Do not send real private health information to prove the issue.
+
+If private vulnerability reporting is unavailable, email **openfhs@gmail.com** with the same information. Do not attach real private records or videos.
+
+Urgent veterinary concerns are outside this channel.
+
+## Supported versions
+
+Security and privacy fixes are focused on the latest public alpha and the current `main` branch. Older alpha builds may not receive backported fixes.
+
+## Boundaries worth reviewing
+
+The public tester package is static and records remain local by default. Useful security reports may involve any real attacker-controlled path, including:
+
+- file imports, filenames, free text, exports, media, and metadata
+- unsafe rendering or script injection
+- selected-cat export isolation
+- sharing and consent state separation
+- validated imports and preservation of original data
+- local preview and desktop server exposure
+- path traversal or unintended file access
+- accidental publication of secrets, private files, or machine-specific data
+- dependency and build-chain compromise
+- privacy leaks between browser storage, IndexedDB, backups, or exports
+
+No category is excluded just because OpenFHS is a prototype.
 
 ## Known limits
 
-Browser storage and downloaded backups are unencrypted; access to the same browser profile can expose them. Users must keep backups. Browser storage and media do not share a cross-store atomic transaction. The Windows launcher is unsigned. Optional email support has only process-local abuse controls and must not be exposed as a public service without further work. These limitations do not excuse new boundary failures.
+Browser storage and downloaded backups are unencrypted. Anyone with access to the same browser profile or backup file may be able to read them.
+
+Browser storage and media do not share a cross-store atomic transaction.
+
+The current Windows launcher is unsigned. Use official GitHub releases and verify published checksums when provided.
+
+Optional email support has process-local abuse controls only and must not be exposed as a public service without additional hardening.
+
+These known limits do not excuse new boundary failures.
+
+## Public issue hygiene
+
+Use fictional or minimized examples in public bug reports. Redact names, addresses, exact locations, contact information, credentials, tokens, private paths, and actual cat health records before sharing screenshots or logs.
