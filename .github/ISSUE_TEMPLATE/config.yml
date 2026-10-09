@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or privacy vulnerability
+    url: https://github.com/amgedi/OpenFHS/security
+    about: Use the Security tab for private reporting when available. Do not post exploit details or private health information publicly.
+  - name: Tester guide
+    url: https://github.com/amgedi/OpenFHS/blob/main/docs/tester-alpha.md
+    about: Start here before testing the current fictional-data alpha.
